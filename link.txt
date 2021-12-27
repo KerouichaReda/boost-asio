@@ -1,0 +1,1 @@
+[boost asio strand] (https://www.crazygaze.com/blog/2016/03/17/how-strands-work-and-why-you-should-use-them/)
