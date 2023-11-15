@@ -1,1 +1,2 @@
 # TODO:
+* finish synchronous server

@@ -1,8 +1,4 @@
-/**
-* \project server
-* \file main.cpp
-* contain the main function of 
-*/
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -10,12 +6,14 @@
 #include <mutex>
 #include <boost/asio.hpp>
 
-#include "header_files/server.h"
+
+#include "conf.h"
+#include "server.h"
 
 int main(){
-    Conf project_conf;    
+    Conf conf_;    
     boost::asio::io_context ioc;
-    Server server(ioc, project_conf);
+    Server server(ioc, conf_);
     server.run();
     return EXIT_SUCCESS;
 }
