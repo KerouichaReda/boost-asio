@@ -21,4 +21,4 @@ class Client {
   std::set<std::shared_ptr<Session>> set_;
 };
 
-#endif  //! SERVER_H
+#endif  //! CLIENT_H
