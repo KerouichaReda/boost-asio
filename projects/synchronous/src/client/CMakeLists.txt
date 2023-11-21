@@ -14,6 +14,7 @@ find_package(Boost REQUIRED COMPONENTS thread)
 SET(PROJECT_SOURCE_FILES
 client.cc
 session.cc
+conf.cc
 main.cc
 )
 
