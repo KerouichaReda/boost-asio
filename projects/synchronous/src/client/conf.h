@@ -7,6 +7,6 @@
 struct Conf {
   Conf() {}
   std::string server_address_{"127.0.0.1"};
-  std::uint16_t server_port_{8000};
+  std::uint16_t server_port_{8080};
 };
 #endif  //! CONF_H

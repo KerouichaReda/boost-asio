@@ -28,10 +28,11 @@ void Server::accept() {
   }
 }
 void Server::answer() {
+  std::chrono::milliseconds ms{1};
   while (true) {
     for (std::shared_ptr<Session> session : set_) {
       session->answer();
-    }    
+    }
     for (std::set<std::shared_ptr<Session>>::iterator itr = set_.begin(),
                                                       end = set_.end();
          itr != end;) {
@@ -41,4 +42,6 @@ void Server::answer() {
         ++itr;
       }
     }
+    std::this_thread::sleep_for(ms);
   }
+}
