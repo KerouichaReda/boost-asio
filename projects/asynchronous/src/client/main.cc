@@ -1,6 +1,6 @@
 #include <iostream>
 
 int main(){
-    std::cout << "Hello, Server!!" << std::endl;
+    std::cout << "Hello, Client!!" << std::endl;
     return EXIT_SUCCESS;
 }
