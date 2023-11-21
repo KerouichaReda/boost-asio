@@ -9,8 +9,6 @@ class Client {
  private:
 };
 
-Client::Client() {}
 
-Client::~Client() {}
 
 #endif  //! CLIENT_H
