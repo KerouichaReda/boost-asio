@@ -8,12 +8,20 @@ Server::Server(boost::asio::io_context& ioc, Conf& conf)
 
 Server::~Server() {}
 
-void Server::run() { listen(); }
+void Server::run() {
+  try {
+    listen();
+    ioc_.run();
+  } catch (const std::exception& e) {
+    std::cout << "Error : " << e.what() << std::endl;
+  }
+}
 
 void Server::listen() {
   acceptor_.async_accept([this](const boost::system::error_code& ec,
                                 boost::asio::ip::tcp::socket socket) {
     if (!ec) {
+      std::cout << "new session!!!" << std::endl;
       std::make_shared<Session>(std::move(socket), conf_)->run();
     }
     listen();

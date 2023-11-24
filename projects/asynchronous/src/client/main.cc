@@ -8,5 +8,6 @@ int main(){
     Conf conf_;
     Client client_(ioc_,conf_);
     client_.run();
+    ioc_.run();
     return EXIT_SUCCESS;
 }

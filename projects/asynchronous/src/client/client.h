@@ -1,8 +1,9 @@
 #ifndef CLIENT_H
 #define CLIENT_H
 #include <boost/asio.hpp>
-#include "session.h"
+
 #include "conf.h"
+#include "session.h"
 class Client {
  public:
   Client(boost::asio::io_context&, Conf&);
@@ -11,8 +12,11 @@ class Client {
 
  private:
   boost::asio::io_context& ioc_;
-  boost::asio::ip::tcp::resolver resolver_;
   Conf& conf_;
+  boost::asio::ip::tcp::resolver resolver_;
+  boost::asio::ip::tcp::resolver::results_type ep_;
+  std::shared_ptr<Session> ptr;
+  
 };
 
 #endif  //! CLIENT_H
