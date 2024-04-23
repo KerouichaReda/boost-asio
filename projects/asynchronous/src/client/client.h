@@ -15,8 +15,6 @@ class Client {
   Conf& conf_;
   boost::asio::ip::tcp::resolver resolver_;
   boost::asio::ip::tcp::resolver::results_type ep_;
-  std::shared_ptr<Session> ptr;
-  
 };
 
 #endif  //! CLIENT_H

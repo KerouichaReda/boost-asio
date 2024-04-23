@@ -6,10 +6,9 @@ Client::Client(boost::asio::io_context& ioc, Conf& conf)
 Client::~Client() {}
 
 void Client::run() {
-  ep_ = resolver_.resolve(conf_.address_, std::to_string(conf_.port_));
-  ptr = std::make_shared<Session>(ioc_, ep_, conf_);
+  ep_ = resolver_.resolve(conf_.address_, std::to_string(conf_.port_)); 
   try {
-    ptr->run();    
+    std::make_shared<Session>(ioc_, ep_, conf_)->run();    
   } catch (const std::exception& e ) {
     std::cout << "Error : " << e.what() << std::endl;
     return;

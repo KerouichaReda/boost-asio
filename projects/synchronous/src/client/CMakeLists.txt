@@ -3,7 +3,7 @@ project(client LANGUAGES CXX)
 
 ## DEPENDECIES
 
-set(BOOST_ROOT "C:/lib/boost_1_82_0")
+set(BOOST_ROOT "C:/lib/boost_1_84_0")
 set(BOOST_LIBRARYDIR ${BOOST_ROOT}/stage/lib/)
 set(Boost_USE_STATIC_LIBS ON)
 
